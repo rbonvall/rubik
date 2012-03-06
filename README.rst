@@ -1,19 +1,15 @@
-Computacion Grafica
-Tarea 5
-Autor: Roberto Bonvallet <rbonvall@inf.utfsm.cl>
-Numero de grupo: 20
-Plataforma: Linux
-
+Cubo rubik
+==========
 
 Compilacion y ejecucion
 -----------------------
-Para compilar:
+Para compilar::
 
-    make
+    $ make
 
-Para ejecutar:
+Para ejecutar::
 
-    ./tarea5
+    $ ./tarea5
 
 
 Descripcion del programa
@@ -27,15 +23,16 @@ Manipulacion de la camara
 La camara puede trasladarse alrededor del cubo, subir para ver la cara de
 arriba o bajar para ver la cara de abajo.  Las posiciones finales de la camara
 estan predeterminadas, por lo que el movimiento no es libre.  Las traslaciones
-se activan con las teclas:
+se activan con las teclas::
 
       w
     a s d
 
-    a:  girar a la izquierda
-    d:  girar a la derecha
-    w:  subir la camara
-    s:  bajar la camara
+
+* a:  girar a la izquierda
+* d:  girar a la derecha
+* w:  subir la camara
+* s:  bajar la camara
 
 Para simplificar la implementacion, la camara se mueve en linea recta entre los
 puntos predeterminados.  Esto entrega la impresion de que el cubo "salta" hacia
@@ -47,7 +44,7 @@ Manipulacion del cubo
 ---------------------
 Nueve letras son utilizadas para manipular el cubo, cada una asignada a una
 "rebanada" del cubo.  Las mayúsculas rotan la rebanada en un sentido, y las
-minúsculas en otro:
+minúsculas en otro::
 
 
                      / \
@@ -62,13 +59,13 @@ minúsculas en otro:
              | \| \ /   \ / |/ |
         H h  |\ |\ |\   /| /| /|
              | \| \| \ / |/ |/ |
-              \ |\ |\ | /| /| / 
-               \| \| \|/ |/ |/  
+              \ |\ |\ | /| /| /
+               \| \| \|/ |/ |/
               Z  \ |\ | /| /   N
               z   \| \|/ |/    n
-                 X  \ | /   B   
-                 x   \|/    b   
-                    C    V   
+                 X  \ | /   B
+                 x   \|/    b
+                    C    V
                     c    v
 
 
@@ -96,5 +93,5 @@ Observacion
 El programa fue probado en un computador lento, y las animaciones estan
 implementadas de modo que se vean bien en el.  Quizas en un computador rapido
 las animaciones no se vean bien.  En este caso, conviene dar un valor mas alto
-a las constantes ROTATION_STEPS en main.c y TRASLATION_STEPS en camera.h.
+a las constantes ``ROTATION_STEPS`` en ``main.c`` y ``TRASLATION_STEPS`` en ``camera.h``.
 
