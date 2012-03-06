@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall #-ggdb
 
 tarea5: tarea5.o camera.o bitmap.o cube.o
-	$(CC) $(CFLAGS) -lm -lGLU -lglut $^ -o $@
+	$(CC) $(CFLAGS) -lm -lGL -lGLU -lglut $^ -o $@
 
 tarea5.o: tarea5.c camera.o bitmap.o cube.o
 bitmap.o: bitmap.c bitmap.h
